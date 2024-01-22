@@ -31,7 +31,7 @@ public class App
                 case 2:
                     System.out.println("Anna siilin nimi:");
                     String name = sc.next();
-                    System.out.println("Anna siilin ikä");
+                    System.out.println("Anna siilin ikä:");
                     int age = sc.nextInt();
                     sl = new Hedgehog(name, age);
                     break;
