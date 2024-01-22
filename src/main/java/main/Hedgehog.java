@@ -27,7 +27,7 @@ public class Hedgehog {
     }
 
     public void askInput() {
-        System.out.println("Olen " + name + " ja ikäni on " + age + ", mutta antaisitko silti syötteen?");
+        System.out.println("Olen " + name + " ja ikäni on " + age + " vuotta, mutta antaisitko silti syötteen?");
     }
 }
 
