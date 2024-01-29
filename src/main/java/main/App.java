@@ -19,10 +19,10 @@ public static void main(String[] args) {
         while (!exit) {
             System.out.println("1) Luo uusi eläin, 2) Listaa kaikki eläimet, 3) Juoksuta eläimiä, 0) Lopeta ohjelma");
             int i = sc.nextInt();
-            sc.nextLine();
 
             switch(i) {
                 case 1:
+                    sc.nextLine();
                     System.out.println("Mikä laji?");
                     String species = sc.nextLine();
                     System.out.println("Anna eläimen nimi:");
