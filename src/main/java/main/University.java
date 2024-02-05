@@ -29,7 +29,6 @@ public class University {
             ObjectOutputStream studentWriter = new ObjectOutputStream(new FileOutputStream("savestudents.dat"));
             studentWriter.writeObject(students);
             studentWriter.close();
-            System.out.println("Opiskelijat tallennettu tiedostoon");
         } catch (IOException e) {
             System.out.println("Oppilaitten tallentaminen ei onnistunut");
             e.printStackTrace();
@@ -41,7 +40,6 @@ public class University {
             ObjectInputStream studentReader = new ObjectInputStream(new FileInputStream("savestudents.dat"));
             students = (ArrayList<Student>) studentReader.readObject();
             studentReader.close();
-            System.out.println("Opiskelijat ladattu tiedostosta");
         } catch (FileNotFoundException e) {
             System.out.println("Oppilaitten lukeminen ei onnistunut");
             e.printStackTrace();
