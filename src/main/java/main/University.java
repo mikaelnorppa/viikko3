@@ -26,7 +26,7 @@ public class University {
 
     public void saveStudents() {
         try {
-            ObjectOutputStream studentWriter = new ObjectOutputStream(new FileOutputStream("FILENAME"));
+            ObjectOutputStream studentWriter = new ObjectOutputStream(new FileOutputStream("savestudents.dat"));
             studentWriter.writeObject(students);
             studentWriter.close();
             System.out.println("Opiskelijat tallennettu tiedostoon");
@@ -38,7 +38,7 @@ public class University {
 
     public void loadStudents() {
         try {
-            ObjectInputStream studentReader = new ObjectInputStream(new FileInputStream("FILENAME"));
+            ObjectInputStream studentReader = new ObjectInputStream(new FileInputStream("savestudents.dat"));
             students = (ArrayList<Student>) studentReader.readObject();
             studentReader.close();
             System.out.println("Opiskelijat ladattu tiedostosta");
