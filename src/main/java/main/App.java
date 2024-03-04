@@ -12,7 +12,7 @@ public class App
 public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Tervetuloa Gifu-järjestelmään");
-        System.out.println("Mille yliopistolle haluat järjestelmän käyttöön?");
+        System.out.println("Mille yliopistolle haluat ottaa järjestelmän käyttöön?");
         String universityName = sc.nextLine();
         Gifu gifu = new Gifu(universityName);
 
@@ -41,7 +41,6 @@ public static void main(String[] args) {
                     System.out.println("Anna opiskelijan opiskelijanumero:");
                     String studentNumber = sc.nextLine();
                     gifu.addStudent(studentName, studentNumber);
-                    System.out.println("Opiskelija lisätty: " + studentName);
                     break;
                 case 3:
                     ArrayList<Course> courses = gifu.listCourses();
@@ -56,10 +55,11 @@ public static void main(String[] args) {
                 case 4:
                     ArrayList<Student> students = gifu.listStudents();
                     if (students.isEmpty()) {
-                        System.out.println("Ei opiskelijoita.");
-                    } else {
-                        for (Student student : students) {
-                            System.out.println(student.getStudentNumber() + ": " + student.getName());
+                    System.out.println("Ei opiskelijoita.");
+                     } else {
+                        for (int i = 0; i < students.size(); i++) {
+                            Student student = students.get(i);
+                            System.out.println(i + ") " + student.getStudentNumber() + " " + student.getName());
                         }
                     }
                     break;
